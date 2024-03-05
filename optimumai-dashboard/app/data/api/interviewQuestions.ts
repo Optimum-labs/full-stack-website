@@ -1,0 +1,31 @@
+const interviewQuestions = [
+    'Describe a challenging situation you faced at work and how you handled it.',
+    'Explain a project you worked on that demonstrates your problem-solving skills.',
+    'Discuss a time when you had to collaborate with a difficult team member.',
+    'How do you prioritize tasks when working on multiple projects?',
+    'What is your approach to solving complex problems?',
+    'How do you handle stressful situations at work?',
+    'Describe a time when you had to adapt to a major change at work.',
+    'Explain a situation where you had to meet a tight deadline.',
+    'How do you handle constructive criticism from supervisors or colleagues?',
+    'What motivates you to perform your best work?',
+    'Describe a time when you had to resolve a conflict with a coworker or supervisor.',
+    'Explain a project you worked on that demonstrates your leadership skills.',
+    'How do you stay organized and focused in a fast-paced work environment?',
+    'Discuss a time when you had to make a difficult decision at work.',
+    'What is your approach to managing your time and priorities?',
+    'Describe a time when you had to overcome a major setback at work.',
+    'Explain a situation where you had to work with limited resources.',
+    'How do you handle competing priorities and deadlines?',
+    'What is your approach to managing a heavy workload?',
+    'Describe a time when you had to learn a new skill or technology quickly.',
+    'Explain a project you worked on that demonstrates your creativity.',
+    'How do you handle ambiguity and uncertainty in the workplace?',
+    'What is your approach to managing a team with diverse personalities and work styles?',
+    'Describe a time when you had to take on a leadership role in a challenging situation.',
+    'Explain a situation where you had to navigate a complex organizational structure.',
+    'How do you handle feedback from customers or clients?',
+  ];
+  
+  export default interviewQuestions;
+  

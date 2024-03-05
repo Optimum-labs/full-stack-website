@@ -1,0 +1,24 @@
+.mock-interview-bot-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.question-container {
+  margin-top: 30px;
+}
+
+.answer-container textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.button-container button {
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.bot-response-container {
+  margin-top: 20px;
+}

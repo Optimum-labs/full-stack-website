@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+}
+
+.contents-here {
+  margin-left: 18%;
+}
+
+.main-video {
+  margin-left: 20%;
+}
+
+.user-info-container {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bg__img {
+  background-image: url('/images.jpg')
+}
+
+.compony__name {
+  text-shadow: 4px 4px 6px #670546;
+  -webkit-text-stroke: 1px #430638;
+}
