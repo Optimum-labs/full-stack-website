@@ -1,0 +1,13 @@
+{
+  "name": "full-stack-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:optimumai-frontend": "cd optimumai-frontend && npm start",
+    "start:optimumai-dashboard": "cd optimumai-dashboard && npm run dev",
+    "start": "concurrently \"npm:start:optimumai-frontend\" \"npm:start:optimumai-dashboard\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
