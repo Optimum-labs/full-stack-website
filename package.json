@@ -5,7 +5,10 @@
   "scripts": {
     "start:optimumai-frontend": "cd optimumai-frontend && npm start",
     "start:optimumai-dashboard": "cd optimumai-dashboard && npm run dev",
-    "start": "concurrently \"npm:start:optimumai-frontend\" \"npm:start:optimumai-dashboard\""
+    "start": "concurrently \"npm:start:optimumai-frontend\" \"npm:start:optimumai-dashboard\"",
+    "build:optimumai-frontend": "cd optimumai-frontend && npm run build",
+    "build:optimumai-dashboard": "cd optimumai-dashboard && npm run build",
+    "build": "npm run build:optimumai-frontend && npm run build:optimumai-dashboard"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"
