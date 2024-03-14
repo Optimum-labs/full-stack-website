@@ -92,5 +92,5 @@ This project is licensed under the [MIT License](#).
 sudo docker build -t frontend .
 sudo docker run -d -p 80:80 -p 443:443 --network=host frontend
 
-http://localhost:80/ or http://localhost:443/
+http://localhost:80/frontend/ or http://localhost:443/frontend/
 http://localhost:80/dashboard/ or http://localhost:443/dashboard/
