@@ -1,7 +1,7 @@
 
 const User = {
-  avatar: "/images.jpg",
-  username: "OptimumAI Labs",
+  avatar: "/dashboard/images.jpg",
+  username: "OptimumAI Labs - Dashboard",
 };
 
 export default User;
