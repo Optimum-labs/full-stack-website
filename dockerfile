@@ -1,25 +1,27 @@
 FROM node:18-alpine as base
 
-WORKDIR /usr/src/app
-COPY optimumai-frontend optimumai-frontend
-WORKDIR /usr/src/app/optimumai-frontend
+WORKDIR /app
+COPY optimumai-frontend/ /app/optimumai-frontend/
+WORKDIR /app/optimumai-frontend
 RUN npm i && npm run build
-RUN mkdir -p /usr/src/build/frontend
-RUN cp -r /usr/src/app/optimumai-frontend/build /usr/src/build/frontend
+RUN mkdir -p /build/frontend
+RUN cp -r /app/optimumai-frontend/build/* /build/frontend/
 
-WORKDIR /usr/src/app
-COPY optimumai-dashboard optimumai-dashboard
-WORKDIR /usr/src/app/optimumai-dashboard
-RUN npm i && npm run build
-RUN mkdir -p /usr/src/build/dashboard
-RUN cp -r /usr/src/app/optimumai-dashboard/dist /usr/src/build/dashboard
+WORKDIR /app
+COPY optimumai-dashboard /app/optimumai-dashboard
+WORKDIR /app/optimumai-dashboard
+RUN npm i && npm run build && npm i -g http-server
+RUN mkdir -p /build/dashboard
+RUN cp -r /app/optimumai-dashboard/build/* /build/dashboard/
 
 FROM nginx:1.25.4
-COPY --from=base /usr/src/build /etc/nginx/html/build
-# COPY --from=base /usr/src/app/optimumai-frontend /usr/src/app/optimumai-frontend
-# COPY --from=base /usr/src/app/optimumai-dashboard /usr/src/app/optimumai-dashboard
+COPY --from=base /build /etc/nginx/html/
+COPY default.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN chmod -R 777 /etc/nginx/html
 
 EXPOSE 80
 EXPOSE 443
 
-CMD ["nginx", "-g", "daemon off;"] 
+CMD ["nginx", "-g", "daemon off;"]
+# ENTRYPOINT http-server -c-1 -p 443 /build
